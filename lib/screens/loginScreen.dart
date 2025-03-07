@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vision_mate/screens/register.dart';
 
 class loginScreen extends StatelessWidget {
   @override
@@ -9,14 +10,14 @@ class loginScreen extends StatelessWidget {
         child: Column(
           children: [
         Image.asset("assets/img.png"),
-            Text(
-              "Login",
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-            ),
+
+                 Text(
+                "Login",
+                style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+              ),
 
             SizedBox(height: 30),
 
-            // حقول الإدخال
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 30),
               child: Column(
@@ -49,7 +50,7 @@ class loginScreen extends StatelessWidget {
                   ),
 
                   SizedBox(height: 30),
-                  // زر تسجيل الدخول
+
                   Center(
                     child: ElevatedButton(
                       onPressed: () {},
@@ -69,10 +70,25 @@ class loginScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(Icons.g_mobiledata , size: 40, color: Colors.blue,
-                      ),Text("Google"),
+                      ),
+                      Align(alignment: Alignment.center,
+                        child: TextButton(onPressed:(){},
+                          child: const Text("Google" ,
+                            style: TextStyle(fontSize: 15,
+                                fontWeight: FontWeight.bold, color: Colors.black
+                            ),),
+                        ),
+                      ),
                       SizedBox(width: 30),
                       Icon(Icons.facebook, size: 40, color: Colors.blue,),
-                      Text("Facebook")
+                      Align(alignment: Alignment.center,
+                        child: TextButton(onPressed:(){},
+                          child: const Text("facebook" ,
+                            style: TextStyle(fontSize: 15,
+                                fontWeight: FontWeight.bold, color: Colors.black
+                            ),),
+                        ),
+                      ),
                     ],
                   ),
           
@@ -82,7 +98,7 @@ class loginScreen extends StatelessWidget {
                         Text("Don’t have account?",
                           style: TextStyle(color: Colors.black),),
                         TextButton(onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=> loginScreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> register()));
                         }, child: Text("Create now",
                           style: TextStyle(color: Colors.blue),),
                         ),

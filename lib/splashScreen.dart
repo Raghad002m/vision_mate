@@ -15,7 +15,7 @@ class _State extends State<splashScreen> {
     // TOOO: impement initState
     super.initState();
     Future.delayed(Duration(seconds:5),(){
-      Navigator.pushNamed(context, "/welcomeScreen");
+      Navigator.pushNamed(context, "/register");
     });
   }
   @override

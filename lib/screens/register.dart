@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:vision_mate/screens/FeatureThree.dart';
 import 'package:vision_mate/screens/loginScreen.dart';
 
-class Welcomscreen extends StatelessWidget {
+class register extends StatelessWidget {
 
   var formkey = GlobalKey<FormState>();
   var emailcontroler = TextEditingController();
@@ -91,10 +90,9 @@ class Welcomscreen extends StatelessWidget {
                 }
 
             ),),
-          SizedBox(height: 60,),
-          ElevatedButton(onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>FeatureThree()));
-           } ,
+          SizedBox(height: 30),
+
+          ElevatedButton(onPressed: () {} ,
             style: ElevatedButton.styleFrom(backgroundColor: Colors.blue,
               padding:
               EdgeInsets.symmetric(horizontal: 180, vertical: 25),
