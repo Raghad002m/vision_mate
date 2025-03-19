@@ -1,11 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:vision_mate/screens/register.dart';
 import'package:vision_mate/screens/loginScreen.dart';
 import 'package:vision_mate/splashScreen.dart';
+import 'Data/sqflite.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await DBSqflite.instance.database;
   runApp(MyApp());
 }
 
